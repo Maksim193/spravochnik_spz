@@ -30,7 +30,12 @@ class NoInternetView {
         return label
     }()
     
-    var stackView = UIStackView()
+    private lazy var linesStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.spacing = Constants.Sizes.spasingBetweenLine
+        return stackView
+    }()
     
 //    stackView
 }
