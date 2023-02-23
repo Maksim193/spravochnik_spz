@@ -6,6 +6,7 @@
 //
 
 protocol Buildable {
+    func buildNoInternetScreen() -> NoInternetViewController
     func buildSplashScreen() -> SplashViewController
     func buildStartScreen() -> StartViewController
     func buildRegisterScreen() -> RegisterViewController
@@ -34,6 +35,17 @@ protocol Buildable {
 final class SceneBuildManager {}
 
 extension SceneBuildManager: Buildable {
+    
+    func buildNoInternetScreen() -> NoInternetViewController {
+        let viewController = NoInternetViewController()
+//        let presenter = SplashPresenter(sceneBuildManager: self)
+//
+//        viewController.presenter = presenter
+//        presenter.viewController = viewController
+        
+        return viewController
+    }
+    
     func buildSplashScreen() -> SplashViewController {
         let viewController = SplashViewController()
         let presenter = SplashPresenter(sceneBuildManager: self)
