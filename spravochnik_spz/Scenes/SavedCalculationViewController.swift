@@ -14,18 +14,19 @@ class SavedCalculationViewController: UIViewController {
         return imageView
     }()
     
-    lazy var noInternetTitleLabel: UILabel = {
+    lazy var savedCalcTitleLabel: UILabel = {
         let label = UILabel()
-        label.text = Constants.TextLabels.noInternetTitle
+        label.text = Constants.TextLabels.savedCalcTitle
 //        label.font =
+        label.numberOfLines = 0
         label.textAlignment = .center
         label.tintColor = Constants.Colors.black
         return label
     }()
     
-    lazy var noInternetTextLabel: UILabel = {
+    lazy var savedCalcTextLabel: UILabel = {
         let label = UILabel()
-        label.text = Constants.TextLabels.noInternetText
+        label.text = Constants.TextLabels.savedCalcText
 //        label.font =
         label.numberOfLines = 0
         label.textAlignment = .center
@@ -58,8 +59,8 @@ extension SavedCalculationViewController {
     func addSubViews() {
         view.addSubviews(stackView)
         view.addSubviews(image)
-        stackView.addArrangedSubviews(noInternetTitleLabel,
-                                      noInternetTextLabel)
+        stackView.addArrangedSubviews(savedCalcTitleLabel,
+                                      savedCalcTextLabel)
     }
     
     func setupConstraints() {
