@@ -22,6 +22,8 @@ enum Constants {
     
     enum Images {
         static let logo = UIImage(named: "logo") ?? UIImage()
+        static let noInternet = UIImage(named: "noInternet") ?? UIImage()
+        static let file = UIImage(named: "file") ?? UIImage()
     }
     
     enum Sizes {
@@ -39,6 +41,9 @@ enum Constants {
         static let applicationNameLabelText = "Справочник СПЗ"
         static let infoApplicationLabelText = "Войдите в систему или зарегистрируйтесь, чтобы получить полный доступ к приложению с возможность сохранять и делиться произведенными расчетами"
         static let infoWithLinksLabelText = "Выполняя вход в приложение вы соглашаетесь с Условиями использования и Политикой конфиденциальности"
+        
+        static let noInternetTitle = "Нет соединения"
+        static let noInternetText = "Проверьте подключено ли устройство к Интернету"
     }
     
     enum TextButtons {
